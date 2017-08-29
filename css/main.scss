@@ -23,16 +23,16 @@ $font-path-file-name: {{ site.baseurl }}/assets/fonts/$font-name/$font-name;
 $title-font-family: "Playfair Display", "cwTeXMing", serif;
 $title-font-size: 32px;
 
-$base-font-family: "Libre Baskerville", "cwTeXMing", Baskerville, "Book Antiqua", Georgia, Times, serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$base-line-height: 2;
+$base-font-family: "Alegreya", "cwTeXMing", serif;
+$base-font-size:   18px;
+$base-font-weight: 500;
+$base-line-height: 1.8;
 
 $code-font-name: "Cutive Mono";
-$code-font-size: 16px;
+$code-font-size: 18px;
 
 $post-title-font-size: 40px;
-$post-link-font-size: 40px;
+$post-link-font-size: 44px;
 
 $small-font-size:  $base-font-size * 0.875;
 
