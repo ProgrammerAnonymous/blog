@@ -70,7 +70,7 @@ article {
     background: #faf9f5;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
     margin-bottom: $spacing-unit;
-    padding: 3em 3em 1em;
+    padding: 3em 1.5em 1em 1.5em;
     @include media-query($on-palm) {
         padding: 1em 1em 0.3em;
     }
@@ -82,8 +82,8 @@ article {
             color: #b7b1a9;
             display: inline-block;
             float: left;
-            font-family: "Playfair Display";
-            font-size: 121px;
+            font-family: $title-font-family;
+            font-size: 120px;
             font-style: normal;
             font-weight: 700;
             line-height: 70px;
@@ -95,7 +95,7 @@ article {
         }
         &:first-line {
             color: #787065;
-            font-family: "Playfair Display SC";
+            font-family: $post-first-line-font-family;
             font-size: 1em;
             font-style: normal !important;
             font-weight: bold;
@@ -269,6 +269,7 @@ pre,
 code {
     font-size: $code-font-size;
     font-family: $code-font-name, monospace;
+    line-height: $code-line-height;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     background-color: #eef;
@@ -294,8 +295,8 @@ pre {
  */
 
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width: -webkit-calc(#{$content-width} * #{$golden-rate});
+    max-width: calc(#{$content-width} * #{$golden-rate});
     margin-right: auto;
     margin-left: auto;
     padding-right: $spacing-unit;

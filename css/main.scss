@@ -23,20 +23,24 @@ $font-path-file-name: {{ site.baseurl }}/assets/fonts/$font-name/$font-name;
 $title-font-family: "Playfair Display", "cwTeXMing", serif;
 $title-font-size: 32px;
 
-$base-font-family: "Alegreya", "cwTeXMing", serif;
+$base-font-family: "PT Serif", "cwTeXMing", serif;
 $base-font-size:   18px;
-$base-font-weight: 500;
+$base-font-weight: 400;
 $base-line-height: 1.8;
 
 $code-font-name: "Cutive Mono";
 $code-font-size: 18px;
+$code-line-height: 1.6;
 
 $post-title-font-size: 40px;
 $post-link-font-size: 44px;
+$post-first-line-font-family: "Playfair Display SC", "cwTeXMing", serif;
 
 $small-font-size:  $base-font-size * 0.875;
 
 $spacing-unit:     30px;
+$golden-rate:      0.61803;
+$post-width:       $content-width * $golden-rate
 
 $brand-color:      #787065;
 $background-color: #f2f1ed;
@@ -49,6 +53,7 @@ $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
 $content-width:    800px;
+// $content-width:    100vw;
 
 $on-palm:          600px;
 $on-laptop:        800px;
