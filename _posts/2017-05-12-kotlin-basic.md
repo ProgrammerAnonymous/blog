@@ -5,9 +5,9 @@ date:   2017-05-12 06:56:00 +0800
 categories: Kotlin
 ---
 
-## 太過簡單的介紹
+## 非常簡單的介紹
 
-[Kotlin](https://kotlinlang.org/) 雖然很多人說它是 Java 界的 [Swift](https://swift.org/)，而 JetBrains 團隊其實也將它大舉用在 Android 開發上。但我想，Kotlin 就是 Kotlin，就像在 JVM scripting language 裡，Groovy、Scala、Kotlin、Clojure、Ceylon 各有其特殊地位，我們無法說 Scala 與 Clojure 是 functional language，就說這兩個一樣。類比有時能讓我們容易理解與學習事物，但往往也會讓我們迷失了各自的本質。但若你要這麼說，那倒也不是不行啦。我們直接看 Kotlin 官方的定義：
+[Kotlin](https://kotlinlang.org/) 雖然很多人說它是 Java 界的 [Swift](https://swift.org/)，而 JetBrains 團隊其實也將它大舉用在 Android 開發上。但我想，每個語言都有其特定、獨特的語義，對問題的表達方式，如果要實作 Java 的 Swift，其實以 Swift 的創造人，同時也是 LLVM 的創造者 — Chris Lattner 定然有能耐將 Swift 語言 compile 至 JVM 執行。因此，我們將那些類比，當作宣傳文案看待就好，認真面對語言本質才是關鍵。我們直接看 Kotlin 官方的定義：
 
 > Statically typed programming language for the JVM, Android and the browser
 > - [Kotlin lang](https://kotlinlang.org/)
@@ -135,10 +135,10 @@ Total time: 30.376 secs
 
 ```console
 ➜  libs git:(kotlin-basic) ✗ pwd
-/home/gemhuang/Public/kotlin-demo/kotlin-basic/build/libs
+/home/########/kotlin-demo/kotlin-basic/build/libs
 ➜  libs git:(kotlin-basic) ✗ ll
 total 4.0K
--rw-r--r-- 1 gemhuang gemhuang 1.2K May 16 07:03 kotlin-basic-1.0-SNAPSHOT.jar
+-rw-r--r-- 1 #### #### 1.2K May 16 07:03 kotlin-basic-1.0-SNAPSHOT.jar
 ```
 
 如果直接執行這個 jar 檔呢？
@@ -180,8 +180,6 @@ Caused by: java.lang.ClassNotFoundException: kotlin.jvm.internal.Intrinsics
 ```
 
 執行時雖然沒有再爆出找不到 main 的訊息，證實了我們剛剛的猜測，但又發生了一個奇怪的意外：它找不到 ```kotlin.jvm.internal.Intrinsics``` 這個 class！我們從剛剛解開的 jar 檔裡，沒有看到其他的 class 或 jar 檔，那這個 class 在哪裡呢？
-
-> 有沒有人 google 一下？
 
 我們要回頭看 Gradle 的設定檔，然後加入把 compile 相依打包進這個 jar 檔的設定：
 
@@ -228,8 +226,6 @@ Hello World!
 ![Kotlin 6]({{ site.baseurl }}/assets/imgs/kotlin-6.png)
 
 好了，我們已經建立了一個基本的執行模式與基礎架構，好讓我們可以開發最基本的 Kotlin 程式。
-
-但，你或許不覺得怪怪的，但我覺得挺怪的：當代的軟體工法皆奠基於測試之上，Kotlin 的開發難道可以免除嗎？Kotlin 的開發怎麼做測試呢？
 
 ## Kotlin Test
 
@@ -471,7 +467,7 @@ var test = 123
 test = "abc"
 ```
 
-這樣是無法通過編譯的，連 IDE 的語法檢查都過不去。一個 Int，可以這樣宣告：```var a: Int = 123```，或簡單地：```var a = 123```；而很多的 Int 組合在一起，這就成了資料結構的概念，這範例使用到一個最基本的資料結構：Array。宣告一個 Int 的陣列，可以這麼寫：```var values: Array<Int> = arrayOf(1, 2, 3)``` 或 ```var values: Array<Int> = Array(3, {1, 2, 3})```。而 Array 的存取，可以用傳統的寫法，如註 9：```var less = instances[0]```，Array 的索引從 ```0``` 開始，到 ```n - 1```。
+這樣是無法通過編譯的，連 IDE 的語法檢查都過不去。一個 Int，可以這樣宣告：```var a: Int = 123```，或簡單地：```var a = 123```；而很多的 Int 組合在一起，這就成了資料結構的概念，這範例使用到一個最基本的資料結構：Array。宣告一個 Int 的陣列，可以這麼寫：```var values: Array<Int> = arrayOf(1, 2, 3)``` 或 ```var values: Array<Int> = Array(3, {1, 2, 3})```。而 Array 的存取，可以用傳統的寫法，如註 9：```var less = instances[0]```，Array 的索引從 ```0``` 開始，到 ```n - 1```。若要直接宣告一個空的 Array，用 ```emptyArray()``` 即可。
 
 Kotlin 的 Array 有其他的替代用法，不再此處詳述，我們後續會再介紹。
 
